@@ -337,10 +337,11 @@ export function CaseStudyModal({ isOpen, onClose, project }: CaseStudyModalProps
             )}
             <Button
               variant="outline"
-              className="border-gray-700 text-gray-300 hover:bg-gray-800"
-              onClick={() => window.open("/book?type=strategy-call", "_self")}
+              className="border-gray-700 text-gray-300 hover:bg-gray-800 text-black"
+              // onClick={() => window.open("/book?type=strategy-call", "_self")}
+              onClick={() => window.location.href = "https://cal.com/avijit-hazra"}
             >
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2 " />
               Discuss Similar Project
             </Button>
           </div>
