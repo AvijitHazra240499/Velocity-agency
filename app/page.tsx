@@ -100,8 +100,9 @@ export default function HomePage() {
   }
 
   // Booking functionality - redirect to internal booking page
-  const openBooking = (meetingType = "quick-chat") => {
-    window.location.href = `/book?type=${meetingType}`
+  const openBooking = (meetingType: string) => {
+    // window.location.href = `/book?type=${meetingType}`
+    window.location.href = "https://cal.com/avijit-hazra" + (meetingType ? `/${meetingType}` : "")
   }
 
   // Animation variants for staggered animations
@@ -930,8 +931,7 @@ export default function HomePage() {
                 Testimonials
               </button>
               <Button 
-              // onClick={() => openBooking("quick-chat")}
-              onClick={() => window.location.href = "https://cal.com/avijit-hazra"} 
+              onClick={() => openBooking("quick-chat")}
               className="bg-white text-black hover:bg-gray-100">
                 Book a Call
               </Button>
@@ -964,7 +964,7 @@ export default function HomePage() {
 
           <Button
             size="lg"
-            onClick={() => window.location.href = "https://cal.com/avijit-hazra"}
+            onClick={() => openBooking("quick-chat")}
             className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
           >
             Book a Call <ArrowRight className="ml-2 w-5 h-5" />
@@ -1202,7 +1202,7 @@ export default function HomePage() {
                 </div>
 
                 <Button
-                  onClick={() => openBooking("pro-consultation")}
+                  onClick={() => openBooking("")}
                   className="w-full bg-white text-black hover:bg-gray-100 font-semibold"
                 >
                   Reserve <ArrowRight className="ml-2 w-4 h-4" />
@@ -1327,7 +1327,7 @@ export default function HomePage() {
           </p>
           <Button
             size="lg"
-            onClick={() => openBooking("quick-chat")}
+            onClick={() => openBooking('')}
             className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
           >
             Schedule a Free Consultation
