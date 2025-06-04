@@ -929,7 +929,10 @@ export default function HomePage() {
               >
                 Testimonials
               </button>
-              <Button onClick={() => openBooking("quick-chat")} className="bg-white text-black hover:bg-gray-100">
+              <Button 
+              // onClick={() => openBooking("quick-chat")}
+              onClick={() => window.location.href = "https://cal.com/avijit-hazra"} 
+              className="bg-white text-black hover:bg-gray-100">
                 Book a Call
               </Button>
             </div>
