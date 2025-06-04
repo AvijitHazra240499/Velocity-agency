@@ -961,7 +961,7 @@ export default function HomePage() {
 
           <Button
             size="lg"
-            // onClick={() => setShowBooking(true)}
+            onClick={() => window.location.href = "https://cal.com/avijit-hazra"}
             className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
           >
             Book a Call <ArrowRight className="ml-2 w-5 h-5" />
